@@ -1,0 +1,79 @@
+
+
+
+<!-- Estructura básica del documento HTML -->
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<title>Calculator</title>
+	<!-- Tailwind CSS y fuentes -->
+	<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+	<!-- Estilos personalizados -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/reset.css">
+</head>
+<body class="font-display">
+	<!-- Contenedor principal centrado -->
+	<div class="flex min-h-screen w-full items-center justify-center bg-background-light dark:bg-background-dark p-2">
+		<!-- Calculadora principal -->
+		<main class="calculator-container max-w-sm w-full bg-white dark:bg-slate-800 shadow-2xl rounded-xl p-4 sm:p-6 flex flex-col" style="min-height: 600px;">
+			<!-- Histórico de operaciones (parte superior) -->
+			<div id="history" class="text-xs text-slate-300 dark:text-slate-400 text-right mb-2 min-h-[20px]">&nbsp;</div>
+			<!-- Operación en curso (debajo del histórico) -->
+			<div id="current-operation" class="text-base text-slate-400 dark:text-slate-300 text-right mb-1 min-h-[24px]">&nbsp;</div>
+			<!-- Display principal de la calculadora -->
+			<div class="bg-slate-700 dark:bg-background-dark rounded-lg p-4 mb-6 flex items-end justify-end">
+				<h1 id="display" class="text-white text-[40px] sm:text-[56px] font-light leading-tight text-right w-full break-all">0</h1>
+			</div>
+			<!-- Zona de botones -->
+			<div class="flex flex-row gap-2 w-full">
+				<!-- Botones de números y acciones básicas -->
+				<div class="grid grid-cols-3 gap-2 flex-1">
+					<!-- Botón borrar todo -->
+					<button data-action="clear">AC</button>
+					<!-- Botón cambiar signo -->
+					<button data-action="sign">+/-</button>
+					<!-- Botón porcentaje -->
+					<button data-action="percent">%</button>
+					<!-- Botones numéricos -->
+					<button data-number="7">7</button>
+					<button data-number="8">8</button>
+					<button data-number="9">9</button>
+					<button data-number="4">4</button>
+					<button data-number="5">5</button>
+					<button data-number="6">6</button>
+					<button data-number="1">1</button>
+					<button data-number="2">2</button>
+					<button data-number="3">3</button>
+					<!-- Botón cero ocupa dos columnas -->
+					<button class="col-span-2" data-number="0">0</button>
+					<!-- Botón punto decimal -->
+					<button data-number=".">.</button>
+					<!-- Botón igual ocupa toda la fila inferior -->
+					<button data-action="equals" class="equal-btn col-span-3">=</button>
+				</div>
+				<!-- Botones de operaciones en el lateral derecho -->
+				<div class="flex flex-col gap-2 ml-2">
+					<!-- División -->
+					<button class="op-btn" data-action="divide">÷</button>
+					<!-- Multiplicación -->
+					<button class="op-btn" data-action="multiply">×</button>
+					<!-- Resta -->
+					<button class="op-btn" data-action="subtract">−</button>
+					<!-- Suma -->
+					<button class="op-btn" data-action="add">+</button>
+					<!-- Raíz cuadrada -->
+					<button class="op-btn" data-action="sqrt">√</button>
+				</div>
+			</div>
+		</main>
+	</div>
+	<!-- Script de la calculadora -->
+	<script src="js/script.js" defer></script>
+</body>
+</html>
+

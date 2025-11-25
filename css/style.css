@@ -1,0 +1,132 @@
+
+/* Calculadora: fondo verde claro y responsive */
+.calculator-container {
+	background: #b9fbc0 !important;
+	min-height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+@media (min-width: 640px) {
+	.calculator-container {
+		min-width: 400px;
+		min-height: 700px;
+		padding: 2rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.calculator-container {
+		min-width: 100vw;
+		min-height: 100vh;
+		border-radius: 0;
+		padding: 0.5rem;
+	}
+	.op-btn, button[data-number], .equal-btn {
+		height: 44px;
+		width: 44px;
+		font-size: 1.2rem;
+	}
+	#display {
+		font-size: 2rem !important;
+	}
+}
+/* Histórico de operaciones: números en negro */
+#history {
+	color: #111 !important;
+}
+/* Botones especiales pequeños y rojos */
+button[data-action="clear"],
+button[data-action="sign"],
+button[data-action="percent"] {
+	background: #e63946;
+	color: #fff;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 1rem;
+	height: 36px;
+	width: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	transition: background 0.2s;
+	margin: auto;
+}
+button[data-action="clear"]:hover,
+button[data-action="sign"]:hover,
+button[data-action="percent"]:hover {
+	background: #b51728;
+}
+/* Botón de igual ancho en la parte inferior */
+.equal-btn {
+	background: #137fec;
+	color: #fff;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 2rem;
+	height: 56px;
+	margin-top: 8px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	transition: background 0.2s;
+	display: block;
+}
+.equal-btn:hover {
+	background: #0e5fa8;
+}
+/* Estructura principal de la calculadora: fondo verde claro y más alta */
+.max-w-sm.w-full {
+	background: #0f6817 ;
+	min-height: 800px;
+}
+/* Botones de números: fondo negro, texto blanco */
+button[data-number] {
+	background: #111;
+	color: #fff;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 1.5rem;
+	height: 56px;
+	width: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	transition: background 0.2s;
+}
+button[data-number]:hover {
+	background: #333;
+}
+
+
+
+/* Fondo gris oscuro para toda la página */
+body {
+	background: #222831;
+}
+
+/* Estilos personalizados para los iconos */
+.material-symbols-outlined {
+	font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Botones de operaciones en el lateral */
+.op-btn {
+	background: #137fec;
+	color: #fff;
+	border: none;
+	border-radius: 0.5rem;
+	height: 56px;
+	width: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	transition: background 0.2s;
+}
+.op-btn:hover {
+	background: #0e5fa8;
+}
+
