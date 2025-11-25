@@ -1,7 +1,7 @@
 
 /* Calculadora: fondo verde claro y responsive */
 .calculator-container {
-	background: #b9fbc0 !important;
+	background: #65d671 ;
 	min-height: 600px;
 	display: flex;
 	flex-direction: column;
@@ -77,7 +77,7 @@ button[data-action="percent"]:hover {
 }
 /* Estructura principal de la calculadora: fondo verde claro y más alta */
 .max-w-sm.w-full {
-	background: #0f6817 ;
+	background: #467b4a ;
 	min-height: 800px;
 }
 /* Botones de números: fondo negro, texto blanco */
@@ -94,6 +94,19 @@ button[data-number] {
 	justify-content: center;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 	transition: background 0.2s;
+/* Variables para colores principales */
+:root {
+  --color-bg: #65d671;
+  --color-bg-dark: #467b4a;
+  --color-btn: #111;
+  --color-btn-hover: #333;
+  --color-btn-special: #e63946;
+  --color-btn-special-hover: #b51728;
+  --color-equal: #137fec;
+  --color-equal-hover: #0e5fa8;
+  --color-body: #222831;
+  --color-history: #111;
+}
 }
 button[data-number]:hover {
 	background: #333;
